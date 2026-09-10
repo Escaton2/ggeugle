@@ -10,38 +10,7 @@ import {
 export const ChangeRuleTableMap = [
   <></>,
   <div>
-    <div>받침에 관계없이 다음과 같이 변환됩니다.</div>
-    <div className="flex justify-center pt-4">
-      <Table className="w-full max-w-[300px]">
-        <TableHeader>
-          <TableRow>
-            <TableHead className="">음절</TableHead>
-            <TableHead className="text-right">변환 가능</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow>
-            <TableCell className="font-medium">
-              랴, 려, 료, 류, 리, 례
-            </TableCell>
-
-            <TableCell className="text-right">야, 여, 요, 유, 이, 예</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">
-              라, 래, 로, 루, 르, 뢰
-            </TableCell>
-
-            <TableCell className="text-right">나, 내, 노, 누, 느, 뇌</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell className="font-medium">녀, 뇨, 뉴, 니</TableCell>
-
-            <TableCell className="text-right">여, 요, 유, 이</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </div>
+    <div>디스코드 크시 봇 두음법칙</div>
   </div>,
   <div>
     <span className="font-medium">표준두음법칙</span>에 따라 바꿀 수 있는 경우,
