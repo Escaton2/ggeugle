@@ -112,11 +112,11 @@ const noDu_rev = noDu;
 
 function std(char: string) {
   const [cho, jung, jong] = disassemble(char);
-  if (cho === "ㄹ" && ["ㅑ", "ㅕ", "ㅛ", "ㅠ", "ㅣ", "ㅖ"].includes(jung!))
+  if (cho === "ㄹ" && ["ㅕ", "ㅛ", "ㅠ", "ㅣ","ㅖ","ㅒ","ㅑ"].includes(jung!))
     return [char, assemble(["ㅇ", jung!, jong!])];
-  else if (cho === "ㄹ" && ["ㅏ", "ㅐ", "ㅗ", "ㅜ", "ㅡ", "ㅚ"].includes(jung!))
+  else if (cho === "ㄹ")
     return [char, assemble(["ㄴ", jung!, jong!])];
-  else if (cho === "ㄴ" && ["ㅕ", "ㅛ", "ㅠ", "ㅣ"].includes(jung!))
+  else if (cho === "ㄴ" && ["ㅕ", "ㅛ", "ㅠ", "ㅣ","ㅖ","ㅒ","ㅑ"].includes(jung!))
     return [char, assemble(["ㅇ", jung!, jong!])];
   else return [char];
 }// 원형(두음) -> 표준형 매핑
