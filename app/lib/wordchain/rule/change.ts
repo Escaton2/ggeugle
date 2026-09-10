@@ -119,20 +119,65 @@ function std(char: string) {
   else if (cho === "ㄴ" && ["ㅕ", "ㅛ", "ㅠ", "ㅣ"].includes(jung!))
     return [char, assemble(["ㅇ", jung!, jong!])];
   else return [char];
-}
+}// 원형(두음) -> 표준형 매핑
+const stdRevMap: { [key: string]: string } = {
+  라: "나",
+  락: "낙",
+  란: "난",
+  랄: "날",
+  람: "남",
+  랍: "납",
+  랑: "낭",
+  래: "내",
+  랭: "냉",
+  냑: "약",
+  략: "약",
+  냥: "양",
+  량: "양",
+  녀: "여",
+  려: "여",
+  녁: "역",
+  력: "역",
+  년: "연",
+  련: "연",
+  녈: "열",
+  렬: "열",
+  념: "염",
+  렴: "염",
+  렵: "엽",
+  녕: "영",
+  령: "영",
+  녜: "예",
+  례: "예",
+  로: "노",
+  록: "녹",
+  론: "논",
+  롱: "농",
+  뢰: "뇌",
+  뇨: "요",
+  료: "요",
+  룡: "용",
+  루: "누",
+  뉴: "유",
+  류: "유",
+  뉵: "육",
+  륙: "육",
+  륜: "윤",
+  률: "율",
+  륭: "융",
+  륵: "늑",
+  름: "늠",
+  릉: "능",
+  니: "이",
+  리: "이",
+  린: "인",
+  림: "임",
+};
+
 function std_rev(char: string) {
-  const [cho, jung, jong] = disassemble(char);
-  if (cho === "ㅇ" && ["ㅑ", "ㅖ"].includes(jung!))
-    return [char, assemble(["ㄹ", jung!, jong!])];
-  else if (cho === "ㄴ" && ["ㅏ", "ㅐ", "ㅗ", "ㅜ", "ㅡ", "ㅚ"].includes(jung!))
-    return [char, assemble(["ㄹ", jung!, jong!])];
-  else if (cho === "ㅇ" && ["ㅕ", "ㅛ", "ㅠ", "ㅣ"].includes(jung!))
-    return [
-      char,
-      assemble(["ㄴ", jung!, jong!]),
-      assemble(["ㄹ", jung!, jong!]),
-    ];
-  else return [char];
+  const converted = stdRevMap[char];
+  if (converted) return [char, converted];
+  return [char];
 }
 
 function oneWay(char: string) {
